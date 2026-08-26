@@ -1379,7 +1379,7 @@
   async function checkStorageAvailable(){
     if(!firebaseReady) return false;
     try{
-      await db.collection('orlandosfood_dados').doc('__probe__').get();
+      await db.collection('orlandosfood_dados').doc('firebase_probe').get();
       return true;
     }catch(e){ console.error('Firebase/Firestore erro de conexão:', e); return false; }
   }
